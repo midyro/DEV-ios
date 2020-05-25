@@ -18,6 +18,7 @@
 		73D7675C218BA66B00BD13B6 /* DEV_SimpleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7675B218BA66B00BD13B6 /* DEV_SimpleUITests.swift */; };
 		73D7676B2190D88B00BD13B6 /* PushNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D7676A2190D88B00BD13B6 /* PushNotifications.framework */; };
 		73E8ACC72192165E009CE057 /* BrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E8ACC62192165E009CE057 /* BrowserViewController.swift */; };
+		992A53F6247BAEAF0076298D /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992A53F5247BAEAF0076298D /* ThemeManager.swift */; };
 		BA7610B322E20FB9004DBB9E /* MarqueeLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7610B222E20FB9004DBB9E /* MarqueeLabel.framework */; };
 		BD2103FE2345A5B000F1F6FB /* WKWebView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2103FD2345A5B000F1F6FB /* WKWebView+Extensions.swift */; };
 		BD2104002345A66B00F1F6FB /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2103FF2345A66B00F1F6FB /* Notification+Extensions.swift */; };
@@ -74,6 +75,7 @@
 		73D767692190CE3900BD13B6 /* DEV-Simple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DEV-Simple.entitlements"; sourceTree = "<group>"; };
 		73D7676A2190D88B00BD13B6 /* PushNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushNotifications.framework; path = Carthage/Build/iOS/PushNotifications.framework; sourceTree = "<group>"; };
 		73E8ACC62192165E009CE057 /* BrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserViewController.swift; sourceTree = "<group>"; };
+		992A53F5247BAEAF0076298D /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		BA7610B222E20FB9004DBB9E /* MarqueeLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MarqueeLabel.framework; path = Carthage/Build/iOS/MarqueeLabel.framework; sourceTree = "<group>"; };
 		BD2103FD2345A5B000F1F6FB /* WKWebView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extensions.swift"; sourceTree = "<group>"; };
 		BD2103FF2345A66B00F1F6FB /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				1B032B1721E409FE00A2108A /* Globals.swift */,
 				DCEC88482406D58C00871B95 /* MediaManager.swift */,
 				73D7673B218BA66700BD13B6 /* AppDelegate.swift */,
+				992A53F5247BAEAF0076298D /* ThemeManager.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				73E8ACC72192165E009CE057 /* BrowserViewController.swift in Sources */,
 				DC0134922418621400308B7E /* Bundle+Extensions.swift in Sources */,
 				73D7673C218BA66700BD13B6 /* AppDelegate.swift in Sources */,
+				992A53F6247BAEAF0076298D /* ThemeManager.swift in Sources */,
 				BD2104002345A66B00F1F6FB /* Notification+Extensions.swift in Sources */,
 				1B032B1821E409FE00A2108A /* Globals.swift in Sources */,
 				DC8C833A244D7F100081F6CE /* URL+Extensions.swift in Sources */,

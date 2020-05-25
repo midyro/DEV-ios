@@ -91,6 +91,7 @@ class ViewController: UIViewController {
         var url = URL(string: self.devToURL)
         return url?.host
     }()
+    var themeManager = ThemeManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -228,9 +229,7 @@ class ViewController: UIViewController {
                     let user = try JSONDecoder().decode(UserData.self, from: Data(jsonString.utf8))
                     let notificationSubscription = "user-notifications-\(String(user.userID))"
                     try? self.pushNotifications.addDeviceInterest(interest: notificationSubscription)
-                    if user.configBodyClass.contains("night-theme") {
-                        self.applyDarkTheme()
-                    }
+                    self.applyTheme(configBodyClass: user.configBodyClass)
                 } catch {
                     print("Error info: \(error)")
                 }
@@ -238,17 +237,18 @@ class ViewController: UIViewController {
         }
     }
 
-    private func applyDarkTheme() {
-        useDarkMode = true
+    private func applyTheme(configBodyClass: String) {
+        themeManager.loadTheme(withUserConfig: configBodyClass)
+        useDarkMode = themeManager.darkContent
         setNeedsStatusBarAppearanceUpdate()
-        navigationToolBar.isTranslucent = false
-        navigationToolBar.barTintColor = darkBackgroundColor
-        safariButton.tintColor = UIColor.white
-        backButton.tintColor = UIColor.white
-        forwardButton.tintColor = UIColor.white
-        refreshButton.tintColor = UIColor.white
-        view.backgroundColor = darkBackgroundColor
-        activityIndicator.color = UIColor.white
+        navigationToolBar.isTranslucent = themeManager.translucent
+        navigationToolBar.barTintColor = themeManager.barTintColor
+        safariButton.tintColor = themeManager.webViewButtonTintColor
+        backButton.tintColor = themeManager.backButtonTintColor
+        forwardButton.tintColor = themeManager.forwardButtonTintColor
+        refreshButton.tintColor = themeManager.refreshButtonTintColor
+        view.backgroundColor = themeManager.backgroundColor
+        activityIndicator.color = themeManager.activityIndicatorColor
     }
 
     func modifyShellDesign() {
